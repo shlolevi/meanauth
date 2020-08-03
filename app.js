@@ -45,6 +45,6 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
-app.listen(port, () => {
+app.listen(process.env.port || 8080, () => {
     console.log(`server started on port on port ${port}`)
 });
